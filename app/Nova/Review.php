@@ -60,12 +60,12 @@ class Review extends BaseResource
                     BelongsTo::make(__('field.user'), 'user', User::class)
                         ->filterable(),
 
-                    Trix::make('text', 'review'),
+                    Trix::make(__('text'), 'review'),
 
                     RatingField::make(__('reviews.rating'), 'rating')
                         ->sortable(),
 
-                    Select::make('status', 'status')
+                    Select::make(__('status'), 'status')
                         ->options($this->statuses())
                         ->displayUsingLabels()
                         ->onlyOnForms()
@@ -73,7 +73,7 @@ class Review extends BaseResource
                         ->hideWhenCreating()
                         ->sortable()
                         ->rules('required'),
-                    Badge::make('status', 'status')
+                    Badge::make(__('status'), 'status')
                         ->map([
                             \App\Models\Review::WAITING => 'waiting',
                             \App\Models\Review::EDIT => 'edit',
@@ -93,7 +93,7 @@ class Review extends BaseResource
                         ->labels($this->statuses()),
 
 
-                    BelongsTo::make('Updated By', 'edited', User::class)
+                    BelongsTo::make(__('reviews.updated by'), 'edited', User::class)
                         ->readonly()
                         ->hideWhenCreating()
                         ->hideWhenUpdating(),
