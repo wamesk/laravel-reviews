@@ -113,10 +113,9 @@ class Review extends BaseResource
                         ->hideWhenUpdating()
                         ->sortable(),
 
-                    MorphTo::make(__('reviews.model'), 'model')->types([
-                        config('reviews.types.1'), //User::class,
-                        config('reviews.types.2'), //Order::class
-                    ]),
+                    MorphTo::make(__('reviews.model'), 'model')->types(
+                        config('reviews.types')
+                    ),
                 ]),
             ])->withToolbar(),
         ];

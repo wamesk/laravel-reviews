@@ -6,8 +6,8 @@ use App\Nova\User;
 return [
 
     'types' => [
-        '1' => User::class,
-        '2' => Order::class,
+       User::class,
+       Order::class,
     ],
 
     'status_use' => true,

@@ -41,10 +41,10 @@ public function boot(): void
 
 - set types Models <small>or edit label colors</small> in  `config/reviews.php `
 ```php
-  'types' => [
-      '1' => User::class,
-      '2' => Order::class,
-  ],
+    'types' => [
+        User::class,
+        Order::class,
+    ],
    'status_use' => true,
 ```
 - edit translates  `resources/lang/sk/reviews.php `
