@@ -1,15 +1,20 @@
-## Folder Packages
 
-### Service Provider 
+### Preview
+<img alt="preview" src="img.png">
 
-- Add to config/app.php
+### Usage
 
+- register provider
+```php
 Wame\Review\ReviewServiceProvider::class,
+```
 
+- vendor publish   -- reviewServiceProvider
+```php
+php artisan vendor:publish --provider="Wame\Reviews\ReviewServiceProvider"
+```
 
-
-### EventServiceProviedr 
-- add observer nad listeners
+- add EventServiceProvieder for observer nad listeners
 
 ```php
    /**
@@ -29,26 +34,15 @@ public function boot(): void
 }
 ```
 
-### NovaMenu 
-- add to menu
-
-
-### composer.json
-
-
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/",
-            "Wame\\Review\\": "package/reviews/src/"
-        }
-    },
-
-### damp autoload
-### vendor publish   -- reviewServiceProvider
+- add to Nova menu
 ```php
-php artisan vendor:publish --provider="Wame\Reviews\ReviewServiceProvider"
+  MenuItem::resource(Review::class),
 ```
 
-### Config
-- types Models
-- stars count
+- set types Models in config/reviews.php
+```php
+  'types' => [
+      '1' => User::class,
+      '2' => Order::class,
+  ],
+```
