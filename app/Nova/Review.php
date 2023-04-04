@@ -72,7 +72,8 @@ class Review extends BaseResource
                         ->default('0')
                         ->hideWhenCreating()
                         ->sortable()
-                        ->rules('required'),
+                        ->rules('required')
+                        ->hideWhenUpdating(config('reviews.status_use') == false),
                     Badge::make(__('status'), 'status')
                         ->map([
                             \App\Models\Review::WAITING => 'waiting',
@@ -90,7 +91,9 @@ class Review extends BaseResource
                         ])
                         ->filterable()
                         ->sortable()
-                        ->labels($this->statuses()),
+                        ->labels($this->statuses())
+                        ->hideFromIndex(config('reviews.status_use') == false)
+                        ->hideFromDetail(config('reviews.status_use') == false),
 
 
                     BelongsTo::make(__('reviews.updated by'), 'edited', User::class)

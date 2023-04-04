@@ -10,9 +10,9 @@ return [
         '2' => Order::class,
     ],
 
-    'stars_count' => 5,  // in new version
+    'status_use' => true,
 
-    'status_use' => true,   // in new version
+    'stars_count' => 5,  // in new version
 
     'label' => [
 

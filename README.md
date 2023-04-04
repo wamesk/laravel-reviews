@@ -39,10 +39,19 @@ public function boot(): void
   MenuItem::resource(Review::class),
 ```
 
-- set types Models in config/reviews.php
+- set types Models <small>or edit label colors</small> in  `config/reviews.php `
 ```php
   'types' => [
       '1' => User::class,
       '2' => Order::class,
   ],
+   'status_use' => true,
+```
+- edit translates  `resources/lang/sk/reviews.php `
+```php
+  "waiting" => "čakajúci",
+  "approved" => "schválený",
+  "denied" => "zamietnutý",
+  "finished" => "hotové",
+  "edit" => "upraviť",
 ```
