@@ -11,5 +11,12 @@
         "psr-4": {
             "Wame\\Review\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wame\\Review\\ReviewServiceProvider"
+            ]
+        }
     }
 }
