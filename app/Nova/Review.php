@@ -57,10 +57,10 @@ class Review extends BaseResource
 
                     ID::make()->onlyOnForms(),
 
-                    BelongsTo::make(__('field.user'), 'user', User::class)
+                    BelongsTo::make(__('review.user'), 'user', User::class)
                         ->filterable(),
 
-                    Trix::make(__('text'), 'review'),
+                    Trix::make(__('review.text'), 'review'),
 
                     RatingField::make(__('reviews.rating'), 'rating')
                         ->sortable(),
