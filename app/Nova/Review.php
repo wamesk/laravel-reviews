@@ -65,7 +65,7 @@ class Review extends BaseResource
                     RatingField::make(__('reviews.rating'), 'rating')
                         ->sortable(),
 
-                    Select::make(__('status'), 'status')
+                    Select::make(__('reviews.status'), 'status')
                         ->options($this->statuses())
                         ->displayUsingLabels()
                         ->onlyOnForms()
@@ -74,7 +74,7 @@ class Review extends BaseResource
                         ->sortable()
                         ->rules('required')
                         ->hideWhenUpdating(config('reviews.status_use') == false),
-                    Badge::make(__('status'), 'status')
+                    Badge::make(__('reviews.status'), 'status')
                         ->map([
                             \App\Models\Review::WAITING => 'waiting',
                             \App\Models\Review::EDIT => 'edit',
