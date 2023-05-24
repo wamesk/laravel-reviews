@@ -3,6 +3,8 @@
 return [
     "rating" => 'Hodnotenie',
     "status" => 'Status',
+    "text" => 'Text',
+    "user" => 'Užívateľ',
     "updated by" => "Upravené užívateľom",
     "updated_status_by" => "Upravené užívateľom",
     "updated_status_at" => "Dátum úpravy",
