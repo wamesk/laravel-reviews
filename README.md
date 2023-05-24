@@ -11,7 +11,7 @@ Wame\Review\ReviewServiceProvider::class,
 
 - vendor publish   -- reviewServiceProvider
 ```php
-php artisan vendor:publish --provider="Wame\Reviews\ReviewServiceProvider"
+php artisan vendor:publish --provider="Wame\Review\ReviewServiceProvider"
 ```
 
 - add EventServiceProvieder for observer nad listeners
