@@ -14,6 +14,11 @@ Wame\Review\ReviewServiceProvider::class,
 php artisan vendor:publish --provider="Wame\Review\ReviewServiceProvider"
 ```
 
+- migrate
+```php
+php artisan migrate,
+```
+
 - add EventServiceProvieder for observer nad listeners
 
 ```php
