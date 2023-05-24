@@ -4,10 +4,8 @@
 
 ### Usage
 
-- register provider
-```php
-Wame\Review\ReviewServiceProvider::class,
-```
+(register provider only if not auto registred Wame\Review\ReviewServiceProvider::class, )
+
 
 - vendor publish   -- reviewServiceProvider
 ```php
