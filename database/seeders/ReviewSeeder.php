@@ -1,6 +1,6 @@
 <?php
 
-namespace seeders;
+namespace Database\Seeders;
 
 use App\Models\Order;
 use App\Models\Review;
