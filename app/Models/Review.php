@@ -35,11 +35,11 @@ class Review extends \App\Models\BaseModel
     public function statuses(): array
     {
         return [
-            self::WAITING => __('reviews.waiting'),
-            self::EDIT => __('reviews.edit'),
-            self::APPROVED => __('reviews.approved'),
-            self::DENIED => __('reviews.denied'),
-            self::FINISHED => __('reviews.finished'),
+            self::WAITING => __('review.waiting'),
+            self::EDIT => __('review.edit'),
+            self::APPROVED => __('review.approved'),
+            self::DENIED => __('review.denied'),
+            self::FINISHED => __('review.finished'),
         ];
     }
 
