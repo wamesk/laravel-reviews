@@ -1,6 +1,14 @@
 <?php
 
 return [
+    
+    "label" => "Hodnotenia",
+    "plural" => "Hodnotenia", 
+    "singular" => "Hodnotenie",  
+    "detail" => "Hodnotenie: :title", 
+    "create.button" => "Vytvoriť hodnotenie",   
+    "update.button" => "Upraviť hodnotenie",
+    
     "rating" => 'Hodnotenie',
     "status" => 'Status',
     "text" => 'Text',
@@ -15,4 +23,5 @@ return [
     "denied" => "Zamietnutý",
     "finished" => "Hotové",
     "edit" => "Upraviť",
+    
 ];
