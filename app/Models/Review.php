@@ -21,8 +21,8 @@ class Review extends \App\Models\BaseModel
     ];
 
     const
-        WAITING = '0',
-        EDIT = '1',
+        WAITING = '1',
+        EDIT = '2',
         APPROVED = '3',
         DENIED = '4',
         FINISHED = '5';
