@@ -32,6 +32,8 @@ class ReviewServiceProvider extends  ServiceProvider
             $this->publishes([__DIR__.'/../database/migrations' => database_path('migrations')],'migrations');
             //export seeder
             $this->publishes([__DIR__.'/../database/seeders' => database_path('seeders')],'seeders');
+            //export factory
+            $this->publishes([__DIR__.'/../database/factories' => database_path('factories')],'factories');
 
             //export config
             $this->publishes([__DIR__.'/../config/reviews.php' => config_path('reviews.php')], 'config');
