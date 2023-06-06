@@ -62,10 +62,10 @@ class Review extends BaseResource
 
                     Trix::make(__('review.text'), 'review'),
 
-                    RatingField::make(__('reviews.rating'), 'rating')
+                    RatingField::make(__('review.rating'), 'rating')
                         ->sortable(),
 
-                    Select::make(__('reviews.status'), 'status')
+                    Select::make(__('review.status'), 'status')
                         ->options($this->statuses())
                         ->displayUsingLabels()
                         ->onlyOnForms()
@@ -73,8 +73,8 @@ class Review extends BaseResource
                         ->hideWhenCreating()
                         ->sortable()
                         ->rules('required')
-                        ->hideWhenUpdating(config('reviews.status_use') == false),
-                    Badge::make(__('reviews.status'), 'status')
+                        ->hideWhenUpdating(config('review.status_use') == false),
+                    Badge::make(__('review.status'), 'status')
                         ->map([
                             \App\Models\Review::WAITING => 'waiting',
                             \App\Models\Review::EDIT => 'edit',
@@ -96,12 +96,12 @@ class Review extends BaseResource
                         ->hideFromDetail(config('reviews.status_use') == false),
 
 
-                    BelongsTo::make(__('reviews.updated by'), 'edited', User::class)
+                    BelongsTo::make(__('review.updated by'), 'edited', User::class)
                         ->readonly()
                         ->hideWhenCreating()
                         ->hideWhenUpdating(),
 
-                    DateTime::make(__('reviews.updated_status_at'), 'updated_status_at')
+                    DateTime::make(__('review.updated_status_at'), 'updated_status_at')
                         ->displayUsing(function ($date) {
                             if (is_null($date)) {
                                 return '';
@@ -113,7 +113,7 @@ class Review extends BaseResource
                         ->hideWhenUpdating()
                         ->sortable(),
 
-                    MorphTo::make(__('reviews.model'), 'model')->types(
+                    MorphTo::make(__('review.model'), 'model')->types(
                         config('reviews.types')
                     ),
                 ]),
