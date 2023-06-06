@@ -1,6 +1,6 @@
 <?php
 
-namespace Observers;
+namespace App\Observers;
 
 use App\Events\Review\ReviewCreatingEvent;
 use App\Events\Review\ReviewCreatedEvent;
