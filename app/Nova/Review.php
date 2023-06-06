@@ -39,9 +39,17 @@ class Review extends BaseResource
      *
      * @var array
      */
-    public static $search = [
-        'id',
+      public static $search = [
+         'user', 'status', 'review'
     ];
+
+    public static function searchableColumns()
+    {
+        return [
+            'model.id',
+            'review', new SearchableRelation('user', 'name')
+        ];
+    }
 
     /**
      * Get the fields displayed by the resource.
@@ -69,7 +77,7 @@ class Review extends BaseResource
                         ->options($this->statuses())
                         ->displayUsingLabels()
                         ->onlyOnForms()
-                        ->default('0')
+                        ->default('1')
                         ->hideWhenCreating()
                         ->sortable()
                         ->rules('required')
