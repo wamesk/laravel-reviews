@@ -18,13 +18,13 @@ class ReviewSeeder extends Seeder
     {
         Review::create([
             'id' => Str::ulid(),
-            'user_id' => User::where('name', 'developer')->first()->id,
+            'user_id' => User::all()->random()->id,
             'review' => fake()->paragraphs(1, true),
             'rating' => random_int(1,5),
             'status' => random_int(1,3),
             'model_type' => User::class,
-            'model_id' => User::where('name', 'developer')->first()->id,
-
+            'model_id' => User::all()->random()->id,
+            //'model_id' => User::where('name', 'developer')->first()->id,
         ]);
     }
 }
