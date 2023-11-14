@@ -20,9 +20,9 @@ return new class extends Migration
             $table->tinyInteger('status')->default('1');
             $table->ulidMorphs('model');
             $table->foreignUlid('updated_status_by')->default(null)->nullable()->constrained('users');
-            $table->timestamp('updated_status_at')->default(null)->nullable();
-            $table->softDeletes();
-            $table->timestamps();
+            $table->dateTime('updated_status_at')->default(null)->nullable();
+            $table->datetimes();
+            $table->softDeletesDatetime();
         });
     }
 
